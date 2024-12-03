@@ -130,13 +130,11 @@ def rectarea(request):
 
 urls.py
 
-from django.contrib import admin 
-from django.urls import path 
-from skapp import views 
-urlpatterns = [ 
-    path('admin/', admin.site.urls), 
-    path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
-    path('',views.rectarea,name="areaofrectangleroot")
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('lamp_filament/', views.lamp_filament, name='lamp_filament'),
 ]
 '''
 
